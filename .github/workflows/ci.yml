@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        use: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Setup Node
-        use: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 20
 
@@ -33,9 +33,9 @@ jobs:
         run: npm run lint -- --max-warning=0
 
       - name: Build Backend Image
-        run: docker build -t backend ./server
+        run: docker build -t backend ./mern-project-to-deploy/server
 
       - name: Build Frontend Image
-        run: docker build -t frontend ./client
+        run: docker build -t frontend ./mern-project-to-deploy/client
 
       
