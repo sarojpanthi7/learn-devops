@@ -22,7 +22,7 @@ jobs:
 
       - name: Lint Backend
         working-directory: mern-project-to-deploy/server
-        run: npm run lint -- --max-warning=0
+        run: npm run lint -- --max-warnings=0
 
       - name: Install Frontend Dependencies
         working-directory: mern-project-to-deploy/client
@@ -30,7 +30,7 @@ jobs:
 
       - name: Lint Frontend
         working-directory: mern-project-to-deploy/client
-        run: npm run lint -- --max-warning=0
+        run: npm run lint -- --max-warnings=0
 
       - name: Build Backend Image
         run: docker build -t backend ./mern-project-to-deploy/server
