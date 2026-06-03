@@ -60,8 +60,6 @@ function App() {
     fetchTasks();
   };
 
-  let saroj = "unused Variable here";
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
