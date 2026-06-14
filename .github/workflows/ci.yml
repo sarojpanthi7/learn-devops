@@ -44,10 +44,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (Optional)
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Add EC2_HOST to known known_hosts
-      - run: |
+        run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts
         env:
